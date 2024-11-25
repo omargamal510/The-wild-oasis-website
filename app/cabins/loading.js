@@ -1,5 +1,5 @@
 function loading() {
-  return <div>loading cabins</div>;
+  return <div>cabins</div>;
 }
 
 export default loading;
