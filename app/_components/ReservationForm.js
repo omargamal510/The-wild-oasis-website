@@ -1,5 +1,10 @@
+import { useContext } from "react";
+import { useReservation } from "./ReservationContext";
+
 function ReservationForm({ cabin }) {
   // CHANGE
+
+  // const { range, setRange, resetRange } = useReservation();
   const { maxCapacity } = cabin;
 
   return (
@@ -18,6 +23,10 @@ function ReservationForm({ cabin }) {
           <p>{user.name}</p>
         </div> */}
       </div>
+
+      {/* <p>
+        {String(range.from)} to {String(range.from)}
+      </p> */}
 
       <form className="bg-primary-900 py-10 px-16 text-lg flex gap-5 flex-col">
         <div className="space-y-2">
