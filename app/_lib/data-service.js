@@ -231,4 +231,4 @@ export async function deleteBooking(id) {
 }
 
 // Custom functions
-export const extractFirstName = (n) => n.split(" ")[0];
+export const extractFirstName = (n) => n.split(" ").at(0);
