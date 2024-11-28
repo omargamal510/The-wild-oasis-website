@@ -229,3 +229,6 @@ export async function deleteBooking(id) {
   }
   return data;
 }
+
+// Custom functions
+export const extractFirstName = (n) => n.split(" ")[0];
