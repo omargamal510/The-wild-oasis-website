@@ -1,6 +1,8 @@
+import LoginSpinner from "../_components/LoginSpinner";
 import SignInButton from "../_components/SignInButton";
+import { auth } from "../_lib/auth";
 
-function page() {
+async function page() {
   return (
     <>
       <div className="flex mt-10 items-center flex-col gap-10">

@@ -1,7 +1,10 @@
 import { signInAction } from "../_lib/actions";
-import { siginIn } from "../_lib/auth";
+import { auth, siginIn } from "../_lib/auth";
+import LoginSpinner from "./LoginSpinner";
 
-function SignInButton() {
+async function SignInButton() {
+  const session = await auth();
+  console.log(session);
   return (
     <form action={signInAction}>
       <button className="flex items-center gap-6 text-lg border border-primary-300 px-10 py-4 font-medium">
@@ -12,6 +15,7 @@ function SignInButton() {
           width="24"
         />
         <span>Continue with Google</span>
+        {session?.user && <LoginSpinner />}
       </button>
     </form>
   );

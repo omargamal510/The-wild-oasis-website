@@ -2,6 +2,9 @@ import { eachDayOfInterval } from "date-fns";
 import { supabase } from "./supabase";
 import { notFound } from "next/navigation";
 /////////////
+
+export const extractFirstName = (n) => n.split(" ").at(0);
+
 // GET
 
 export async function getCabin(id) {
@@ -187,6 +190,7 @@ export async function createBooking(newBooking) {
 // UPDATE
 
 // The updatedFields is an object which should ONLY contain the updated data
+/*
 export async function updateGuest(id, updatedFields) {
   const { data, error } = await supabase
     .from("guests")
@@ -231,4 +235,5 @@ export async function deleteBooking(id) {
 }
 
 // Custom functions
-export const extractFirstName = (n) => n.split(" ").at(0);
+
+*/
